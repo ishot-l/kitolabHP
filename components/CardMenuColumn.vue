@@ -6,7 +6,7 @@
     "About": "研究室紹介",
     "Projects": "プロジェクト",
     "Publications": "研究業績",
-    "Member": "メンバー",
+    "People": "メンバー",
     "Contact": "お問い合わせ"
   },
   "en": {
@@ -15,7 +15,7 @@
     "About": "About",
     "Projects": "Projects",
     "Publications": "Publications",
-    "Member": "Member",
+    "People": "People",
     "Contact": "Contact"
   }
 }
@@ -30,7 +30,7 @@
             <b-list-group-item :to="localePath('/about')">{{ $t('About') }}</b-list-group-item>
             <b-list-group-item :to="localePath('/projects')">{{ $t('Projects') }}</b-list-group-item>
             <b-list-group-item :to="localePath('/publications')">{{ $t('Publications') }}</b-list-group-item>
-            <b-list-group-item :to="localePath('/member')">{{ $t('Member') }}</b-list-group-item>
+            <b-list-group-item :to="localePath('/People')">{{ $t('People') }}</b-list-group-item>
             <b-list-group-item :to="localePath('/contact')">{{ $t('Contact') }}</b-list-group-item>
         </b-list-group>
     </b-card>

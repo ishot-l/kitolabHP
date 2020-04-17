@@ -28,7 +28,7 @@
       <b-row>
 
         <!-- メイン -->
-        <b-col md="9" order-md="2" class="mb-2">
+        <b-col md="9" class="mb-2">
           <b-card class="mb-2">
             <b-card-body>{{ $t('about_here') }}</b-card-body>
             <b-card-body v-html="$t('about_here2')"></b-card-body>
@@ -36,8 +36,8 @@
           <CardLatestNews />
         </b-col>
 
-        <!-- 左カラム -->
-        <b-col md="3" order-md="1">
+        <!-- 右カラム -->
+        <b-col md="3">
           <CardMenuColumn />
         </b-col>
 

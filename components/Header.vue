@@ -7,7 +7,7 @@
     "About": "研究室紹介",
     "Projects": "プロジェクト",
     "Publications": "研究業績",
-    "Member": "メンバー",
+    "People": "メンバー",
     "Contact": "お問い合わせ"
   },
   "en": {
@@ -17,7 +17,7 @@
     "About": "About",
     "Projects": "Projects",
     "Publications": "Publications",
-    "Member": "Member",
+    "People": "People",
     "Contact": "Contact"
   }
 }
@@ -45,7 +45,7 @@
             <li><nuxt-link :to="localePath('/about')">{{ $t('About') }}</nuxt-link></li>
             <li><nuxt-link :to="localePath('/projects')">{{ $t('Projects') }}</nuxt-link></li>
             <li><nuxt-link :to="localePath('/publications')">{{ $t('Publications') }}</nuxt-link></li>
-            <li><nuxt-link :to="localePath('/member')">{{ $t('Member') }}</nuxt-link></li>
+            <li><nuxt-link :to="localePath('/People')">{{ $t('People') }}</nuxt-link></li>
             <li><nuxt-link :to="localePath('/contact')">{{ $t('Contact') }}</nuxt-link></li>
           </ul>
       </b-collapse>
