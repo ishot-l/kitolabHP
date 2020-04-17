@@ -1,0 +1,21 @@
+{
+  "name": "kitolab",
+  "version": "1.0.0",
+  "description": "Labo homepage",
+  "author": "Toshihiko Doi",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "bootstrap-vue": "^2.0.0",
+    "nuxt": "^2.0.0",
+    "nuxt-i18n": "^6.9.1",
+    "particles.js": "^2.0.0"
+  },
+  "devDependencies": {}
+}
