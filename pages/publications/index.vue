@@ -1,30 +1,179 @@
 <i18n>
 {
     "ja": {
-        "Publications": "研究業績"
+        "Publications": "研究業績",
+        "学位論文（2018年～）": "学位論文（2018年～）",
+        "学術論文・学会発表（2018年〜）": "学術論文・学会発表（2018年〜）",
+        "書籍（2015年以降）": "書籍（2015年以降）",
+        "招待講演（2015年以降）": "招待講演（2015年以降）"
     },
     "en": {
-        "Publications": "Publications"
+        "Publications": "Publications",
+        "学位論文（2018年～）": "Theses (2018-)",
+        "学術論文・学会発表（2018年〜）": "Conference Presentations (2018-)",
+        "書籍（2015年以降）": "Books (2015-)",
+        "招待講演（2015年以降）": "Invited Speeches (2015-)"
     }
 }
 </i18n>
 <template>
-    <b-jumbotron
-        fluid
-        :header="$t('Publications')"
-        header-level="4">
-    </b-jumbotron>
+  <div>
+    <!-- タイトル画像 -->
+    <b-jumbotron fluid :header="$t('Publications')" header-level="4"></b-jumbotron>
+    
+    <b-container fluid class="mt-2 pb-3">
+      <b-row>
+
+        <!-- 研究業績本文 -->
+        <b-col md="9">
+          
+          <h2>{{ $t('学位論文（2018年～）') }}</h2>
+
+          <h3>2019年度（卒業論文９件，修士論文３件）</h3>
+          <p class="note">※修士論文３件は，筑波大学大学院システム情報工学研究科所属の学生によるものです．</p>
+          <table class="table table-borderless ml-3">
+            <tr><td class="publisher">二神克也</td><td class="paper-title">インタンジブルアセットに着目した企業間買収予測モデルの構築と検証</td></tr>
+            <tr><td class="publisher">古川真由</td><td class="paper-title">製品と顧客の多角化に関する戦略間の関係性分析</td></tr>
+            <tr><td class="publisher">守谷凪季</td><td class="paper-title">企業間抗告ネットワークを用いた競争関係の組成解析</td></tr>
+          </table>
+
+          <h3>2018年度（修士論文２件）</h3>
+          <p class="note">※修士論文２件は，筑波大学大学院システム情報工学研究科所属の学生によるものです．</p>
+          <table class="table table-borderless ml-3">
+            <tr><td class="publisher">谷中峻輔</td><td class="paper-title">企業依存度に着目した自動車産業ネットワークの構造および経年変化の分析</td></tr>
+            <tr><td class="publisher">濱本章弘</td><td class="paper-title">大規模実データを用いた企業間取引ネットワークの複雑ネットワーク解析</td></tr>
+          </table>
+
+          <!-- 論文 -->
+          <h2 class="mb-3">{{ $t('学術論文・学会発表（2018年〜）') }}</h2>
+          <ul class="mb-5">
+            <li v-for="(title, index) in papers" :key="index">
+              {{ title }}
+            </li>
+          </ul>
+          
+          <!-- 書籍 -->
+          <h2 class="mb-3">{{ $t('書籍（2015年以降）') }}</h2>
+          <ul class="mb-5">
+            <li v-for="(title, index) in books" :key="index">
+              {{ title }}
+            </li>
+          </ul>
+
+          <!-- 講演 -->
+          <h2 class="mb-3">{{ $t('招待講演（2015年以降）') }}</h2>
+          <ul class="mb-5">
+            <li v-for="(title, index) in talks" :key="index">
+              {{ title }}
+            </li>
+          </ul>
+
+        </b-col>
+
+        <!-- 右カラム -->
+        <b-col md="3">
+          <CardMenuColumn />
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
 </template>
 <script>
+import CardMenuColumn from "@/components/CardMenuColumn.vue";
 export default {
-    
-}
+  components: {
+    CardMenuColumn
+  },
+  computed: {
+    papers: () => [
+      "T. Kito, T. Ikezawa, T. Doi, Y. Fukazawa: “Capturing the trend in the IT industry via network analysis of company descriptions,” NetSci 2020 (under review – postponed).",
+      "T. Kito, T. Doi, T. Ikezawa, Y. Fukazawa: “Business category network analysis for capturing the value of intangibles,” NetSci 2020 (under review – postponed).",
+      "S. Judkowiak, C.S.A. Assuad, T. Kito, K. Martinsen: “Circularity assessment of recycling systems for plastic fish brackets in Norway using Agent-Based simulation,” 18th Global Conference on Sustainable Manufacturing (2020, postponed).",
+      "K.A.B. Engh, C.S.A. Assuad, T. Kito, K. Martinsen: “Effects of customer preferences towards sustainable development on producers in recycling systems for aluminum-based products in Norway,” 18th Global Conference on Sustainable Manufacturing (2020, postponed).",
+      "M. Furukawa, T. Kito, J. Yamanoi, H. Sayama: “An integrated index for product & customer diversification strategies,” oral presentation at NetSci-X 2020 (2020).",
+      "N. Moriya, T. Kito, J. Yamanoi, H. Sayama: “Patent opposition network: Adversarial interactions of companies and trend of innovation,” oral presentation at NetSci-X 2020 (2020).",
+      "H. Fukushige, T. Kito: “Road-Railway Detour Index for multimodal transportation networks,” poster at NetSci-X 2020 (2020).",
+      "Y. Takeuchi, T. Kito, J. Yamanoi: “Trademark network analysis for investigation of name-branding strategies,” poster at NetSci-X 2020 (2020).",
+      "K. Martinsen, C.S.A. Assuad, T. Kito, M. Matsumoto: “Closed loop tolerance engineering modeling and maturity assessment in a circular manufacturing perspective,” Proceedings of EcoDesign 2019 (2019).",
+      "T. Kito, S. New, F. Reed-Tsochas: “Disentangling the complexity of supply relationship formations: Firm product diversification and product ubiquity in the Japanese car industry,” International Journal of Production Economics, Vol. 206, pp.159-168 (2018).",
+      "T. Kito, P. Holme: “Triadic and quadratic closure as mechanisms for inter-firm transactional network dynamics,” lightening presentation at The International Conference on Complex Networks and Their Applications (2018).",
+      "A. Hamamoto, T. Kito: “Effects of industrial and geographical proximities of firms on the Japanese inter-firm network,” lightening presentation at The International Conference on Complex Networks and Their Applications (2018).",
+      "濱本章弘，鬼頭朋見：“企業間取引ネットワークの抽象化へ向けて：非均質なコミュニティの組成解析,” ネットワークが創発する知能研究会 (2018).",
+      "濱本章弘，鬼頭朋見：“企業間取引ネットワークのコミュニティ分析による産業および地域クラスタの組成解析,” 日本経営工学会経営システム誌，Vol.27, No.4, pp.234-239 (2018).",
+      "谷中峻輔，鬼頭朋見：“自動車産業サプライネットワークの構造分析と分類：サプライベースとサプライヤ依存度に注目したアプローチ,” 日本経営工学会経営システム誌，Vol.27, No.4, pp.227-233 (2018).",
+    ],
+    books: () => [
+      "林幸雄，谷澤俊弘，鬼頭朋見，岡本洋（共著）：“Pythonと複雑ネットワーク分析―関係性データからのアプローチ（ネットワーク科学の道具箱II）―”（近代科学社，2019年）",
+      "臼井翔平, 鬼頭朋見, 浅谷公威, 坂本陽平, 高野雅典, 伏見卓恭, 池田 圭佑 (翻訳)：“パワー・オブ・ネットワーク：人々をつなぎ社会を動かす６つの原則，”（森北出版，2018年）",
+    ],
+    talks: () => [
+      "•	鬼頭朋見：“産業ネットワークの複雑さを紐解く：企業の多様性と繋がりの非均質性,” ネットワーク生態学シンポジウム (2017).",
+      "•	鬼頭朋見：“サプライネットワークの非均質性と企業のポートフォリオ戦略,” ネットワーク科学セミナー2017＠統計数理研究所 (2017).",
+      "•	鬼頭朋見：“社会・産業の持続的発展のための領域融合的研究：ビッグデータ＋ネットワーク科学アプローチ,” ＠立命館大学びわこ・くさつキャンパス(2017).",
+      "•	鬼頭朋見：“社会・産業の持続的発展のための領域融合的研究：ビッグデータ＋ネットワーク科学アプローチ,” ＠立命館大学びわこ・くさつキャンパス(2017).",
+      "•	T. Kito: “Detangling complexity of supply network formations: Large-scale data analysis by network science approach”, Faculty of Economics and Business, ＠University of Groningen (2016).",
+      "•	鬼頭朋見: “サプライネットワーク解析とその最新動向,” ERATO河原林巨大グラフプロジェクト @国立情報学研究所 (2016).",
+      "•	鬼頭朋見：”複雑創発系としての社会・経済システム,” @筑波大学人文社会系 歴史・人類学専攻 (2016).",
+      "•	T. Kito, S. New, F. Reed-Tsochas: “Modelling protocols for supply chain mapping”, Discussion Meeting at Hertford College, @University of Oxford, UK (2015).",
+    ],
+  }
+};
 </script>
 <style scoped>
 .jumbotron {
-    background-image: url("~assets/paper.jpg");
-    background-size: cover;
-    background-position: center 60%;
-    color: #fff;
+  background-image: url("~assets/paper.jpg");
+  background-size: cover;
+  background-position: center 60%;
+  color: #fff;
+}
+
+/* 大見出しデザイン */
+h2 {
+  position: relative;
+  padding: 0 0 0.5em 0.7em;
+  border-bottom: 1px solid black;
+}
+h2::after {
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  content: "";
+  width: 5px;
+  height: 1em;
+  background-color: #446689;
+}
+
+/* 小見出しデザイン */
+h3 {
+  position: relative;
+  padding: 0 0.3em 0 1.25em;
+  font-size: 1.25rem;
+  margin-top: 1em;
+}
+h3::after {
+  position: absolute;
+  top: 0.4em;
+  left: 0.3em;
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: #ff5a5f;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 2;
+}
+/* 注意書き */
+.note {
+  padding-left: 1.25em;
+  font-size: 0.8em;
+}
+/* 著者 */
+.publisher {
+  width: 6em;
+}
+
+/* 論文リスト */
+li {
+    margin-bottom: .8em;
 }
 </style>

@@ -1,7 +1,20 @@
+<i18n>
+{
+    "ja": {
+        "h1": "複雑な関係性を科学する",
+        "h2": "複雑系価値創生ネットワーク研究室"
+    },
+    "en": {
+        "h1": "Quest into relations.",
+        "h2": "Research of Complex Value Creation Network"
+    }
+}
+</i18n>
 <template>
     <div class="background">
         <div class="text">
-            <h1>なんかいう</h1>
+            <h1 class="mb-3 px-5">{{ $t('h1') }}</h1>
+            <h2 class="px-3">{{ $t('h2') }}</h2>
         </div>
         <div id="particles">
         </div>
@@ -135,8 +148,11 @@ export default {
     width: 100%;
     height: 360px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #fff;
+    text-align: center;
 }
 
 #particles {
