@@ -12,8 +12,27 @@
         "mathphys": "早稲田大学 数物系科学拠点",
         "学生": "学生",
         "修士課程": "修士課程",
-        "学部生": "学部生"
-    },
+        "学部生": "学部生",
+        "池澤 太一": "池澤 太一",
+        "上田 邦裕": "上田 邦裕",
+        "上田 真之介": "上田 真之介",
+        "近江 裕志": "近江 裕志",
+        "竹内 悠馬": "竹内 悠馬",
+        "土井 俊彦": "土井 俊彦",
+        "福重 寛隆": "福重 寛隆",
+        "櫛野 智史": "櫛野 智史",
+        "浅野 修平": "浅野 修平",
+        "石井 大雅": "石井 大雅",
+        "大久保 優哉": "大久保 優哉",
+        "來海 未宙": "來海 未宙",
+        "高田 侑紀": "高田 侑紀",
+        "二木 恵": "二木 恵",
+        "深澤 実緒": "深澤 実緒",
+        "古江 ": "古江 ",
+        "三角 はやと": "三角 はやと",
+        "村田 裕乙": "村田 裕乙",
+        "安井 丞": "安井 丞"
+  },
     "en": {
         "メンバー": "People",
         "鬼頭 朋見": "Tomomi Kito",
@@ -34,7 +53,18 @@
         "竹内 悠馬": "Yuma Takeuchi",
         "土井 俊彦": "Toshihiko Doi",
         "福重 寛隆": "Hirotaka Fukushige",
-        "櫛野 智史": "Satoshi Kushino"
+        "櫛野 智史": "Satoshi Kushino",
+        "浅野 修平": "Syuhei Asano",
+        "石井 大雅": "Taiga Ishii",
+        "大久保 優哉": "Yuya Ohkubo",
+        "來海 未宙": "Kimachi",
+        "高田 侑紀": "Yuuki Takada",
+        "二木 恵": "Megumi Niki",
+        "深澤 実緒": "Mio Fukazawa",
+        "古江 ": "Furue",
+        "三角 はやと": "Hayato Misumi",
+        "村田 裕乙": "Yuuki Murata",
+        "安井 丞": "Tasuku Yasui"
     }
 }
 </i18n>
@@ -91,6 +121,17 @@
               <b-col md="6">
                 <h3>{{ $t('学部生') }}</h3>
                 <ul>
+                  <li>{{ $t("浅野 修平") }}</li>
+                  <li>{{ $t("石井 大雅") }}</li>
+                  <li>{{ $t("大久保 優哉") }}</li>
+                  <li>{{ $t("來海 未宙") }}</li>
+                  <li>{{ $t("高田 侑紀") }}</li>
+                  <li>{{ $t("二木 恵") }}</li>
+                  <li>{{ $t("深澤 実緒") }}</li>
+                  <li>{{ $t("古江 ") }}</li>
+                  <li>{{ $t("三角 はやと") }}</li>
+                  <li>{{ $t("村田 裕乙") }}</li>
+                  <li>{{ $t("安井 丞") }}</li>
                   <li>{{ $t("櫛野 智史") }}</li>
                 </ul>
               </b-col>
@@ -115,6 +156,7 @@ export default {
 };
 </script>
 <style scoped>
+/* ジャンボトロン */
 .jumbotron {
   background-image: url("~assets/people.jpg");
   background-size: cover;
@@ -122,6 +164,7 @@ export default {
   color: #fff;
 }
 
+/* 大見出しデザイン */
 h2 {
      position: relative;
      padding:0 0 0.5em 0.7em;
@@ -137,6 +180,7 @@ h2::after {
      background-color: #446689;
 }
 
+/* 小見出しデザイン */
 h3 {
 	position: relative;
   padding: 0 .3em 0 1.25em;

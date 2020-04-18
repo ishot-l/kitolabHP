@@ -1,6 +1,8 @@
 <template>
   <b-container fluid="md" class="shadow">
 
+    {{ $route.name }} {{ $route.path }}
+
     <Header />
 
     <b-sidebar id="sidebar-1" title="Sidebar" right shadow>

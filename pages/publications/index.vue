@@ -1,17 +1,17 @@
 <i18n>
 {
     "ja": {
-        "研究業績": "研究業績"
+        "Publications": "研究業績"
     },
     "en": {
-        "研究業績": "Publications"
+        "Publications": "Publications"
     }
 }
 </i18n>
 <template>
     <b-jumbotron
         fluid
-        :header="$t('研究業績')"
+        :header="$t('Publications')"
         header-level="4">
     </b-jumbotron>
 </template>
