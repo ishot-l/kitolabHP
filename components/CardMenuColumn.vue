@@ -54,4 +54,8 @@ export default {
   border-bottom: 0;
   border-top: 2px solid rgba(25, 100, 240, 0.7);
 }
+.card-body {
+  padding: 0;
+  padding-top: 1rem;
+}
 </style>

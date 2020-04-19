@@ -102,10 +102,12 @@ h3::after {
 
 .address {
   padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .route {
   padding-left: 1rem;
+  padding-right: 1rem;
   text-indent: 1rem;
 }
 </style>

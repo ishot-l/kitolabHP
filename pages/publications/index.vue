@@ -3,6 +3,8 @@
     "ja": {
         "Publications": "研究業績",
         "鬼頭研究室": "鬼頭研究室",
+        "修士論文": "修士論文",
+        "卒業論文": "卒業論文",
         "学位論文（2018年～）": "学位論文（2018年～）",
         "学術論文・学会発表（2018年〜）": "学術論文・学会発表（2018年〜）",
         "書籍（2015年以降）": "書籍（2015年以降）",
@@ -11,6 +13,8 @@
     "en": {
         "Publications": "Publications",
         "鬼頭研究室": "Kito Laboratory",
+        "修士論文": "Master's",
+        "卒業論文": "Bachelor's",
         "学位論文（2018年～）": "Theses (2018-)",
         "学術論文・学会発表（2018年〜）": "Conference Presentations (2018-)",
         "書籍（2015年以降）": "Books (2015-)",
@@ -40,15 +44,23 @@
 
           <h3>2019年度（卒業論文９件，修士論文３件）</h3>
           <p class="note">※修士論文３件は，筑波大学大学院システム情報工学研究科所属の学生によるものです．</p>
-          <table class="table table-borderless ml-3">
-            <tr><td class="publisher">二神克也</td><td class="paper-title">インタンジブルアセットに着目した企業間買収予測モデルの構築と検証</td></tr>
-            <tr><td class="publisher">古川真由</td><td class="paper-title">製品と顧客の多角化に関する戦略間の関係性分析</td></tr>
-            <tr><td class="publisher">守谷凪季</td><td class="paper-title">企業間抗告ネットワークを用いた競争関係の組成解析</td></tr>
+          <table class="table table-borderless">
+            <tr><td colspan="2" class="table-title">{{ $t('修士論文') }}</td></tr>
+            <tr v-for="(paper, index) in thesis['2019'].master" :key="'2019_master_' + index">
+              <td class="publisher">{{ paper.publisher }}</td>
+              <td class="paper-title">{{ paper.title }}</td>
+            </tr>
+            <tr><td colspan="2" class="table-title">{{ $t('卒業論文') }}</td></tr>
+            <tr v-for="(paper, index) in thesis['2019'].bachelor" :key="'2019_bachelor_' + index">
+              <td class="publisher">{{ paper.publisher }}</td>
+              <td class="paper-title">{{ paper.title }}</td>
+            </tr>
           </table>
 
           <h3>2018年度（修士論文２件）</h3>
           <p class="note">※修士論文２件は，筑波大学大学院システム情報工学研究科所属の学生によるものです．</p>
-          <table class="table table-borderless ml-3">
+          <table class="table table-borderless">
+            <tr><td colspan="2" class="table-title">{{ $t('修士論文') }}</td></tr>
             <tr><td class="publisher">谷中峻輔</td><td class="paper-title">企業依存度に着目した自動車産業ネットワークの構造および経年変化の分析</td></tr>
             <tr><td class="publisher">濱本章弘</td><td class="paper-title">大規模実データを用いた企業間取引ネットワークの複雑ネットワーク解析</td></tr>
           </table>
@@ -56,7 +68,7 @@
           <!-- 論文 -->
           <h2 class="mb-3" id="public">{{ $t('学術論文・学会発表（2018年〜）') }}</h2>
           <ul class="mb-5">
-            <li v-for="(title, index) in papers" :key="index" class="paper">
+            <li v-for="(title, index) in papers" :key="'public_' + index" class="paper">
               {{ title }}
             </li>
           </ul>
@@ -64,7 +76,7 @@
           <!-- 書籍 -->
           <h2 class="mb-3" id="book">{{ $t('書籍（2015年以降）') }}</h2>
           <ul class="mb-5">
-            <li v-for="(title, index) in books" :key="index" class="paper">
+            <li v-for="(title, index) in books" :key="'book_' + index" class="paper">
               {{ title }}
             </li>
           </ul>
@@ -72,7 +84,7 @@
           <!-- 講演 -->
           <h2 class="mb-3" id="talk">{{ $t('招待講演（2015年以降）') }}</h2>
           <ul class="mb-5">
-            <li v-for="(title, index) in talks" :key="index" class="paper">
+            <li v-for="(title, index) in talks" :key="'talk_' + index" class="paper">
               {{ title }}
             </li>
           </ul>
@@ -99,6 +111,54 @@ export default {
     CardMenuColumn
   },
   computed: {
+    thesis: () => ({
+      "2019": {
+        "master":
+          [
+            {
+              "publisher": "二神克也",
+              "title": "インタンジブルアセットに着目した企業間買収予測モデルの構築と検証"
+            },{
+              "publisher": "古川真由",
+              "title": "製品と顧客の多角化に関する戦略間の関係性分析"
+            },{
+              "publisher": "守谷凪季",
+              "title": "企業間抗告ネットワークを用いた競争関係の組成解析"
+            }
+          ],
+        "bachelor":
+          [
+            {
+              "publisher": "池澤太一",
+              "title": "企業の概要文館の類似度ネットワーク分析を用いた業界動向に関する研究"
+            },{
+              "publisher": "上田邦裕",
+              "title": "素材情報を用いた自動車部品間の類似性の定量化とサプライヤのポートフォリオ分析"
+            },{
+              "publisher": "上田真之介",
+              "title": "MASを用いた多都市核・周辺モデルにおける集積・分散パターンの創発原理の研究"
+            },{
+              "publisher": "近江裕志",
+              "title": "世界の自動車メーカ間の戦略の違いに着目したサプライベース・ネットワーク分析"
+            },{
+              "publisher": "後藤大知",
+              "title": "地理的要因に着目した米国内の企業間買収ネットワーク分析"
+            },{
+              "publisher": "竹内悠馬",
+              "title": "飲料メーカの商標データを用いた企業戦略に関するネットワーク分析"
+            },{
+              "publisher": "土井俊彦",
+              "title": "技術領域間の繋がりに着目した企業エコシステムの発展に関するネットワーク分析"
+            },{
+              "publisher": "福重寛隆",
+              "title": "経路探索APIを用いた東京近郊交通網の実データ分析とアクセシビリティ検証"
+            },{
+              "publisher": "馬浩成",
+              "title": "営業職の職場内SNSにおける個人の業績評価と会話傾向の関係性に関する研究"
+            }
+          ]
+      }
+    }),
     papers: () => [
       "T. Kito, T. Ikezawa, T. Doi, Y. Fukazawa: “Capturing the trend in the IT industry via network analysis of company descriptions,” NetSci 2020 (under review – postponed).",
       "T. Kito, T. Doi, T. Ikezawa, Y. Fukazawa: “Business category network analysis for capturing the value of intangibles,” NetSci 2020 (under review – postponed).",
@@ -180,6 +240,7 @@ h3::after {
 /* 注意書き */
 .note {
   padding-left: 1.25em;
+  padding-right: 1em;
   font-size: 0.8em;
 }
 /* 著者 */
@@ -190,5 +251,19 @@ h3::after {
 /* 論文リスト */
 .paper {
     margin-bottom: .8em;
+}
+.table {
+  width: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.table .table-title {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+  font-weight: bold
+}
+.table th, .table td {
+  padding: .25rem;
 }
 </style>
