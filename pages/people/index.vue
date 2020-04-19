@@ -2,6 +2,7 @@
 {
     "ja": {
         "メンバー": "メンバー",
+        "鬼頭研究室": "鬼頭研究室",
         "鬼頭 朋見": "鬼頭 朋見",
         "所属（准教授）": "所属（准教授）",
         "早稲田大学": "早稲田大学",
@@ -35,11 +36,12 @@
   },
     "en": {
         "メンバー": "People",
+        "鬼頭研究室": "Kito Laboratory",
         "鬼頭 朋見": "Tomomi Kito",
         "所属（准教授）": "Associate professor",
         "早稲田大学": "Waseda University",
         "mgmt": "Department of Industrial and Management System Engineering, School of Creative Science and Engineering",
-        "bdm": "Department of Business Design and Management",
+        "bdm": "Department of Business Design and Management, Graduate School of Creative Science and Engineering",
         "その他の所属": "Member of",
         "winlab": "Waseda Innovation Laboratory",
         "mathphys": "Waseda University Mathematics and Physics Unit",
@@ -150,6 +152,11 @@
 <script>
 import CardMenuColumn from "@/components/CardMenuColumn.vue";
 export default {
+  head() {
+    return {
+      title: `${this.$t('メンバー')} | ${this.$t('鬼頭研究室')}`
+    }
+  },
   components: {
     CardMenuColumn
   }

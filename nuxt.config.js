@@ -1,15 +1,16 @@
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: "Kito Laboratory",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: '早稲田大学創造理工学部経営システム工学科 鬼頭研究室のホームページです。' },
+      { hid: 'keywords', name: 'keywords', content: "早稲田,Waseda,経営,システム,複雑ネットワーク,研究室,鬼頭研究室" },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -23,12 +24,13 @@ export default {
   ** Global CSS
   */
   css: [
+    '~assets/font.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~plugins/particles.js'
+    { src: '~plugins/particles.js', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -40,6 +42,7 @@ export default {
   */
   modules: [
     'bootstrap-vue/nuxt',
+    ['vue-scrollto/nuxt', {'duration': 500}],
     [
       'nuxt-i18n',
       {

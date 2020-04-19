@@ -2,6 +2,7 @@
 {
     "ja": {
         "Publications": "研究業績",
+        "鬼頭研究室": "鬼頭研究室",
         "学位論文（2018年～）": "学位論文（2018年～）",
         "学術論文・学会発表（2018年〜）": "学術論文・学会発表（2018年〜）",
         "書籍（2015年以降）": "書籍（2015年以降）",
@@ -9,6 +10,7 @@
     },
     "en": {
         "Publications": "Publications",
+        "鬼頭研究室": "Kito Laboratory",
         "学位論文（2018年～）": "Theses (2018-)",
         "学術論文・学会発表（2018年〜）": "Conference Presentations (2018-)",
         "書籍（2015年以降）": "Books (2015-)",
@@ -26,8 +28,15 @@
 
         <!-- 研究業績本文 -->
         <b-col md="9">
+
+          <ul>
+            <li><nuxt-link to v-scroll-to="'#thesis'">{{ $t('学位論文（2018年～）') }}</nuxt-link></li>
+            <li><nuxt-link to v-scroll-to="'#public'">{{ $t('学術論文・学会発表（2018年〜）') }}</nuxt-link></li>
+            <li><nuxt-link to v-scroll-to="'#book'">{{ $t('書籍（2015年以降）') }}</nuxt-link></li>
+            <li><nuxt-link to v-scroll-to="'#talk'">{{ $t('招待講演（2015年以降）') }}</nuxt-link></li>
+          </ul>
           
-          <h2>{{ $t('学位論文（2018年～）') }}</h2>
+          <h2 id="thesis">{{ $t('学位論文（2018年～）') }}</h2>
 
           <h3>2019年度（卒業論文９件，修士論文３件）</h3>
           <p class="note">※修士論文３件は，筑波大学大学院システム情報工学研究科所属の学生によるものです．</p>
@@ -45,25 +54,25 @@
           </table>
 
           <!-- 論文 -->
-          <h2 class="mb-3">{{ $t('学術論文・学会発表（2018年〜）') }}</h2>
+          <h2 class="mb-3" id="public">{{ $t('学術論文・学会発表（2018年〜）') }}</h2>
           <ul class="mb-5">
-            <li v-for="(title, index) in papers" :key="index">
+            <li v-for="(title, index) in papers" :key="index" class="paper">
               {{ title }}
             </li>
           </ul>
           
           <!-- 書籍 -->
-          <h2 class="mb-3">{{ $t('書籍（2015年以降）') }}</h2>
+          <h2 class="mb-3" id="book">{{ $t('書籍（2015年以降）') }}</h2>
           <ul class="mb-5">
-            <li v-for="(title, index) in books" :key="index">
+            <li v-for="(title, index) in books" :key="index" class="paper">
               {{ title }}
             </li>
           </ul>
 
           <!-- 講演 -->
-          <h2 class="mb-3">{{ $t('招待講演（2015年以降）') }}</h2>
+          <h2 class="mb-3" id="talk">{{ $t('招待講演（2015年以降）') }}</h2>
           <ul class="mb-5">
-            <li v-for="(title, index) in talks" :key="index">
+            <li v-for="(title, index) in talks" :key="index" class="paper">
               {{ title }}
             </li>
           </ul>
@@ -81,6 +90,11 @@
 <script>
 import CardMenuColumn from "@/components/CardMenuColumn.vue";
 export default {
+  head() {
+    return {
+      title: `${this.$t('Publications')} | ${this.$t('鬼頭研究室')}`
+    }
+  },
   components: {
     CardMenuColumn
   },
@@ -107,14 +121,14 @@ export default {
       "臼井翔平, 鬼頭朋見, 浅谷公威, 坂本陽平, 高野雅典, 伏見卓恭, 池田 圭佑 (翻訳)：“パワー・オブ・ネットワーク：人々をつなぎ社会を動かす６つの原則，”（森北出版，2018年）",
     ],
     talks: () => [
-      "•	鬼頭朋見：“産業ネットワークの複雑さを紐解く：企業の多様性と繋がりの非均質性,” ネットワーク生態学シンポジウム (2017).",
-      "•	鬼頭朋見：“サプライネットワークの非均質性と企業のポートフォリオ戦略,” ネットワーク科学セミナー2017＠統計数理研究所 (2017).",
-      "•	鬼頭朋見：“社会・産業の持続的発展のための領域融合的研究：ビッグデータ＋ネットワーク科学アプローチ,” ＠立命館大学びわこ・くさつキャンパス(2017).",
-      "•	鬼頭朋見：“社会・産業の持続的発展のための領域融合的研究：ビッグデータ＋ネットワーク科学アプローチ,” ＠立命館大学びわこ・くさつキャンパス(2017).",
-      "•	T. Kito: “Detangling complexity of supply network formations: Large-scale data analysis by network science approach”, Faculty of Economics and Business, ＠University of Groningen (2016).",
-      "•	鬼頭朋見: “サプライネットワーク解析とその最新動向,” ERATO河原林巨大グラフプロジェクト @国立情報学研究所 (2016).",
-      "•	鬼頭朋見：”複雑創発系としての社会・経済システム,” @筑波大学人文社会系 歴史・人類学専攻 (2016).",
-      "•	T. Kito, S. New, F. Reed-Tsochas: “Modelling protocols for supply chain mapping”, Discussion Meeting at Hertford College, @University of Oxford, UK (2015).",
+      "鬼頭朋見：“産業ネットワークの複雑さを紐解く：企業の多様性と繋がりの非均質性,” ネットワーク生態学シンポジウム (2017).",
+      "鬼頭朋見：“サプライネットワークの非均質性と企業のポートフォリオ戦略,” ネットワーク科学セミナー2017＠統計数理研究所 (2017).",
+      "鬼頭朋見：“社会・産業の持続的発展のための領域融合的研究：ビッグデータ＋ネットワーク科学アプローチ,” ＠立命館大学びわこ・くさつキャンパス(2017).",
+      "鬼頭朋見：“社会・産業の持続的発展のための領域融合的研究：ビッグデータ＋ネットワーク科学アプローチ,” ＠立命館大学びわこ・くさつキャンパス(2017).",
+      "T. Kito: “Detangling complexity of supply network formations: Large-scale data analysis by network science approach”, Faculty of Economics and Business, ＠University of Groningen (2016).",
+      "鬼頭朋見: “サプライネットワーク解析とその最新動向,” ERATO河原林巨大グラフプロジェクト @国立情報学研究所 (2016).",
+      "鬼頭朋見：”複雑創発系としての社会・経済システム,” @筑波大学人文社会系 歴史・人類学専攻 (2016).",
+      "T. Kito, S. New, F. Reed-Tsochas: “Modelling protocols for supply chain mapping”, Discussion Meeting at Hertford College, @University of Oxford, UK (2015).",
     ],
   }
 };
@@ -132,6 +146,7 @@ h2 {
   position: relative;
   padding: 0 0 0.5em 0.7em;
   border-bottom: 1px solid black;
+  font-size: 1.5rem;
 }
 h2::after {
   position: absolute;
@@ -173,7 +188,7 @@ h3::after {
 }
 
 /* 論文リスト */
-li {
+.paper {
     margin-bottom: .8em;
 }
 </style>

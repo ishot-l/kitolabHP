@@ -1,14 +1,48 @@
+<i18n>
+{
+  "ja": {
+    "鬼頭研究室": "鬼頭研究室",
+    "メニュー": "メニュー",
+    "Home": "トップ",
+    "About": "研究室紹介",
+    "Projects": "プロジェクト",
+    "Publications": "研究業績",
+    "People": "メンバー",
+    "Contact": "お問い合わせ",
+    "News": "お知らせ",
+    "Access": "アクセス"
+  },
+  "en": {
+    "鬼頭研究室": "Kito Laboratory",
+    "メニュー": "Menu",
+    "Home": "Home",
+    "About": "About",
+    "Projects": "Projects",
+    "Publications": "Publications",
+    "People": "People",
+    "Contact": "Contact",
+    "News": "News",
+    "Access": "Access"
+  }
+}
+</i18n>
 <template>
   <b-container fluid="md" class="shadow">
 
     <Header />
 
-    <b-sidebar id="sidebar-1" title="メニュー" right shadow>
+    <b-sidebar id="sidebar-1" :title="$t('メニュー')" shadow>
       <div class="px-3 py-2">
-        <p>
-          メニューが入ります
-        </p>
-        <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
+        <b-list-group flush>
+          <b-list-group-item :to="localePath('/')">{{ $t('Home') }}</b-list-group-item>
+          <b-list-group-item :to="localePath('/about')">{{ $t('About') }}</b-list-group-item>
+          <b-list-group-item :to="localePath('/projects')">{{ $t('Projects') }}</b-list-group-item>
+          <b-list-group-item :to="localePath('/publications')">{{ $t('Publications') }}</b-list-group-item>
+          <b-list-group-item :to="localePath('/people')">{{ $t('People') }}</b-list-group-item>
+          <b-list-group-item :to="localePath('/news')">{{ $t('News') }}</b-list-group-item>
+          <b-list-group-item :to="localePath('/access')">{{ $t('Access') }}</b-list-group-item>
+          <b-list-group-item :to="localePath('/contact')">{{ $t('Contact') }}</b-list-group-item>
+        </b-list-group>
       </div>
     </b-sidebar>
 

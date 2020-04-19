@@ -7,7 +7,9 @@
     "Projects": "プロジェクト",
     "Publications": "研究業績",
     "People": "メンバー",
-    "Contact": "お問い合わせ"
+    "Contact": "お問い合わせ",
+    "News": "お知らせ",
+    "Access": "アクセス"
   },
   "en": {
     "メニュー": "Menu",
@@ -16,7 +18,9 @@
     "Projects": "Projects",
     "Publications": "Publications",
     "People": "People",
-    "Contact": "Contact"
+    "Contact": "Contact",
+    "News": "News",
+    "Access": "Access"
   }
 }
 </i18n>
@@ -31,6 +35,8 @@
             <b-list-group-item :to="localePath('/projects')">{{ $t('Projects') }}</b-list-group-item>
             <b-list-group-item :to="localePath('/publications')">{{ $t('Publications') }}</b-list-group-item>
             <b-list-group-item :to="localePath('/people')">{{ $t('People') }}</b-list-group-item>
+            <b-list-group-item :to="localePath('/news')">{{ $t('News') }}</b-list-group-item>
+            <b-list-group-item :to="localePath('/access')">{{ $t('Access') }}</b-list-group-item>
             <b-list-group-item :to="localePath('/contact')">{{ $t('Contact') }}</b-list-group-item>
         </b-list-group>
     </b-card>
@@ -42,6 +48,7 @@ export default {
 <style scoped>
 .card {
   border-radius: 0;
+  border: none;
 }
 .card-header {
   border-bottom: 0;

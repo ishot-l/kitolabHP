@@ -2,42 +2,50 @@
 {
   "ja": {
     "鬼頭研究室": "鬼頭研究室",
+    "logo": "logo.png",
     "早稲田大学": "早稲田大学",
     "Home": "トップページ",
     "About": "研究室紹介",
     "Projects": "プロジェクト",
     "Publications": "研究業績",
     "People": "メンバー",
-    "Contact": "お問い合わせ"
+    "News": "お知らせ",
+    "Contact": "お問い合わせ",
+    "Access": "アクセス"
   },
   "en": {
-    "鬼頭研究室": "Kito Laboratory",
+    "鬼頭研究室": "Kito Lab.",
+    "logo": "logo_en.png",
     "早稲田大学": "Waseda University",
     "Home": "Home",
     "About": "About",
     "Projects": "Projects",
     "Publications": "Publications",
     "People": "People",
-    "Contact": "Contact"
+    "News": "News",
+    "Contact": "Contact",
+    "Access": "Access"
   }
 }
 </i18n>
 <template>
     <b-navbar toggleable="md">
       <b-navbar-brand :to="localePath('/')">
-        {{ $t('早稲田大学') }}<br>
-        {{ $t('鬼頭研究室') }}
+        <h2>{{ $t('早稲田大学') }}</h2>
+        <h1>{{ $t('鬼頭研究室') }}</h1>
       </b-navbar-brand>
       
 
       <b-navbar-nav class="ml-auto mr-2">
-          <b-nav-item :to="switchLocalePath('ja')" v-if="$i18n.locale !== 'ja'">日本語</b-nav-item>
-          <b-nav-item :to="switchLocalePath('en')" v-if="$i18n.locale !== 'en'">English</b-nav-item>
+        <b-collapse is-nav class="contacts">
+          <b-nav-item :to="localePath('/contact')">{{ $t('Contact') }}</b-nav-item>
+          <b-nav-item :to="localePath('/access')">{{ $t('Access') }}</b-nav-item>
+        </b-collapse>
+
+        <b-nav-item :to="switchLocalePath('ja')" v-if="$i18n.locale !== 'ja'">日本語</b-nav-item>
+        <b-nav-item :to="switchLocalePath('en')" v-if="$i18n.locale !== 'en'">English</b-nav-item>
       </b-navbar-nav>
-      <b-navbar-toggle class="border-none">
-        <a v-b-toggle.sidebar-1>
-          三
-        </a>
+      <b-navbar-toggle target="sidebar-1">
       </b-navbar-toggle>
       <b-collapse is-nav class="menu-wrapper">
           <ul class="menu">
@@ -46,7 +54,7 @@
             <li><nuxt-link :to="localePath('/projects')">{{ $t('Projects') }}</nuxt-link></li>
             <li><nuxt-link :to="localePath('/publications')">{{ $t('Publications') }}</nuxt-link></li>
             <li><nuxt-link :to="localePath('/people')">{{ $t('People') }}</nuxt-link></li>
-            <li><nuxt-link :to="localePath('/contact')">{{ $t('Contact') }}</nuxt-link></li>
+            <li><nuxt-link :to="localePath('/news')">{{ $t('News') }}</nuxt-link></li>
           </ul>
       </b-collapse>
     </b-navbar>
@@ -60,6 +68,21 @@ export default {
 .navbar {
   flex-wrap: wrap;
 }
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-brand h1 {
+  font-size: 1.5rem;
+}
+
+.navbar-brand h2 {
+  font-size: .8rem;
+  margin-bottom: 0;
+  color: gray;
+}
+
 
 .menu-wrapper {
   margin: 0;
@@ -92,6 +115,10 @@ export default {
   color: #000;
   border-left: 1px solid gray;
 }
+
+.menu li:first-child a{
+  border-left: 0;
+}
 .menu li a:hover{
   color: #fff;
 }
@@ -111,5 +138,16 @@ export default {
 .menu li a:hover::before {
   transform-origin: left top;
   transform: skewX(-30deg) scale(1, 1);
+}
+
+.contacts {
+  padding-right: 2rem;
+  font-size: .8rem;
+}
+
+.contacts .nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+  color: rgba(0, 0, 0, 1);
 }
 </style>
