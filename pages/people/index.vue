@@ -63,7 +63,7 @@
         "高田 侑紀": "Yuuki Takada",
         "二木 恵": "Megumi Niki",
         "深澤 実緒": "Mio Fukazawa",
-        "古江 尚大": "Furue",
+        "古江 尚大": "Takahiro Furue",
         "三角 颯": "Hayato Misumi",
         "村田 裕乙": "Yuuki Murata",
         "安井 丞": "Tasuku Yasui"

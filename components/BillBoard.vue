@@ -5,8 +5,8 @@
         "h2": "複雑系価値創造ネットワーク研究室"
     },
     "en": {
-        "h1": "複雑な関係性を科学する",
-        "h2": "Complex Value Creation Network Laboratory"
+        "h1": "Complex Systems, Value Creation and Network Science Lab",
+        "h2": " "
     }
 }
 </i18n>

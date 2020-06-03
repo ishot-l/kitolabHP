@@ -16,7 +16,7 @@
         "修士論文": "Master's",
         "卒業論文": "Bachelor's",
         "学位論文（2018年～）": "Theses (2018-)",
-        "学術論文・学会発表（2018年〜）": "Conference Presentations (2018-)",
+        "学術論文・学会発表（2018年〜）": "Journal Articles & Conference Presentations (refereed) (2018-)",
         "書籍（2015年以降）": "Books (2015-)",
         "招待講演（2015年以降）": "Invited Speeches (2015-)"
     }
