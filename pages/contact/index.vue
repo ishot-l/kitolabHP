@@ -22,6 +22,9 @@
       <b-row>
         <b-col md="9" class="mb-2">
           
+          <div class="contact-form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfKA8a9pN9nKUJHgtdB44Mea9GvzrqGAPXCpp7t1t8odNZMHA/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+          </div>
         </b-col>
 
         <b-col md="3">
@@ -52,4 +55,8 @@ export default {
     background-position: center 60%;
     color: #fff;
 }
+.contact-form {
+    padding-top: 2rem;
+}
+
 </style>
