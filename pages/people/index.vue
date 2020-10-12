@@ -11,6 +11,7 @@
         "その他の所属": "その他の所属",
         "winlab": "早稲田イノベーション研究所",
         "mathphys": "早稲田大学 数物系科学拠点",
+        "giti": "早稲田大学 国際情報通信研究センター",
         "学生": "学生",
         "修士課程": "修士課程",
         "学部生": "学部生",
@@ -42,6 +43,7 @@
         "早稲田大学": "Waseda University",
         "mgmt": "Department of Industrial and Management System Engineering, School of Creative Science and Engineering",
         "bdm": "Department of Business Design and Management, Graduate School of Creative Science and Engineering",
+        "giti": "Global Information and Telecommunication Institute",
         "その他の所属": "Member of",
         "winlab": "Waseda Innovation Laboratory",
         "mathphys": "Waseda University Mathematics and Physics Unit",
@@ -99,6 +101,7 @@
                 <ul>
                   <li><a href="https://www.winlab.tokyo" target="_brank">{{ $t('winlab') }}</a></li>
                   <li><a href="http://www.sgu-mathphys.sci.waseda.ac.jp" target="_brank">{{ $t('mathphys') }}</a></li>
+                  <li><a href="https://www.waseda.jp/fsci/giti/" target="_brank">{{ $t('giti') }}</a></li>
                   <li><a href="https://research.wpcarey.asu.edu/supply-networks/" target="_brank">Complex Adaptive Supply Networks</a></li>
                   <li><a href="https://www.cabdyn.ox.ac.uk/complexity_home.asp" target="_brank">Cabdyn Complexity Centre</a></li>
                 </ul>

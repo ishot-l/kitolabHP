@@ -160,8 +160,8 @@ export default {
       }
     }),
     papers: () => [
-      "T. Kito, T. Ikezawa, T. Doi, Y. Fukazawa: “Capturing the trend in the IT industry via network analysis of company descriptions,” NetSci 2020 (under review – postponed).",
-      "T. Kito, T. Doi, T. Ikezawa, Y. Fukazawa: “Business category network analysis for capturing the value of intangibles,” NetSci 2020 (under review – postponed).",
+      "T. Ikezawa, T. Kito, T. Doi, Y. Fukazawa: “Capturing the trend in the IT industry via network analysis of company descriptions”, NetSci 2020, poster presentation (2020).",
+      "T. Doi, T. Kito, T. Ikezawa, Y. Fukazawa: “Business category network analysis for capturing the value of intangibles”, NetSci 2020, poster presentation (2020).",
       "S. Judkowiak, C.S.A. Assuad, T. Kito, K. Martinsen: “Circularity assessment of recycling systems for plastic fish brackets in Norway using Agent-Based simulation,” 18th Global Conference on Sustainable Manufacturing (2020, postponed).",
       "K.A.B. Engh, C.S.A. Assuad, T. Kito, K. Martinsen: “Effects of customer preferences towards sustainable development on producers in recycling systems for aluminum-based products in Norway,” 18th Global Conference on Sustainable Manufacturing (2020, postponed).",
       "M. Furukawa, T. Kito, J. Yamanoi, H. Sayama: “An integrated index for product & customer diversification strategies,” oral presentation at NetSci-X 2020 (2020).",
@@ -183,7 +183,6 @@ export default {
     talks: () => [
       "鬼頭朋見：“産業ネットワークの複雑さを紐解く：企業の多様性と繋がりの非均質性,” ネットワーク生態学シンポジウム (2017).",
       "鬼頭朋見：“サプライネットワークの非均質性と企業のポートフォリオ戦略,” ネットワーク科学セミナー2017＠統計数理研究所 (2017).",
-      "鬼頭朋見：“社会・産業の持続的発展のための領域融合的研究：ビッグデータ＋ネットワーク科学アプローチ,” ＠立命館大学びわこ・くさつキャンパス(2017).",
       "鬼頭朋見：“社会・産業の持続的発展のための領域融合的研究：ビッグデータ＋ネットワーク科学アプローチ,” ＠立命館大学びわこ・くさつキャンパス(2017).",
       "T. Kito: “Detangling complexity of supply network formations: Large-scale data analysis by network science approach”, Faculty of Economics and Business, ＠University of Groningen (2016).",
       "鬼頭朋見: “サプライネットワーク解析とその最新動向,” ERATO河原林巨大グラフプロジェクト @国立情報学研究所 (2016).",
