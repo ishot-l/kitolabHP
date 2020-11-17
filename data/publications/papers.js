@@ -1,0 +1,21 @@
+export default 
+[
+    "T. Kito, N. Moriya, J. Yamanoi: “Inter-organisational patent opposition network: how companies form adversarial relationships,” The Japanese Economic Review, https://doi.org/10.1007/s42973-020-00057-5 (2020).",
+    "T. Kito, K. Futagami, N. Kapoor, Y. Fukazawa: “Predicting future pairs of acquirer and acquiree companies by using information of companies’ relationships and network positions,” The proceedings of Conference on Complex Systems (CCS) (2020).",
+    "T. Kito, N. Moriya, J. Yamanoi: “The emergence of the inter-organisational adversarial network in strategic patenting,” The proceedings of Conference on Complex Systems (CCS) (2020).",
+    "T. Ikezawa, T. Kito, T. Doi, Y. Fukazawa: “Capturing the trend in the IT industry via network analysis of company descriptions”, NetSci 2020, poster presentation (2020).",
+    "T. Doi, T. Kito, T. Ikezawa, Y. Fukazawa: “Business category network analysis for capturing the value of intangibles”, NetSci 2020, poster presentation (2020).",
+    "S. Judkowiak, C.S.A. Assuad, T. Kito, K. Martinsen: “Circularity assessment of recycling systems for plastic fish brackets in Norway using Agent-Based simulation,” 18th Global Conference on Sustainable Manufacturing (2020, postponed).",
+    "K.A.B. Engh, C.S.A. Assuad, T. Kito, K. Martinsen: “Effects of customer preferences towards sustainable development on producers in recycling systems for aluminum-based products in Norway,” 18th Global Conference on Sustainable Manufacturing (2020, postponed).",
+    "M. Furukawa, T. Kito, J. Yamanoi, H. Sayama: “An integrated index for product & customer diversification strategies,” oral presentation at NetSci-X 2020 (2020).",
+    "N. Moriya, T. Kito, J. Yamanoi, H. Sayama: “Patent opposition network: Adversarial interactions of companies and trend of innovation,” oral presentation at NetSci-X 2020 (2020).",
+    "H. Fukushige, T. Kito: “Road-Railway Detour Index for multimodal transportation networks,” poster at NetSci-X 2020 (2020).",
+    "Y. Takeuchi, T. Kito, J. Yamanoi: “Trademark network analysis for investigation of name-branding strategies,” poster at NetSci-X 2020 (2020).",
+    "K. Martinsen, C.S.A. Assuad, T. Kito, M. Matsumoto: “Closed loop tolerance engineering modeling and maturity assessment in a circular manufacturing perspective,” Proceedings of EcoDesign 2019 (2019).",
+    "T. Kito, S. New, F. Reed-Tsochas: “Disentangling the complexity of supply relationship formations: Firm product diversification and product ubiquity in the Japanese car industry,” International Journal of Production Economics, Vol. 206, pp.159-168 (2018).",
+    "T. Kito, P. Holme: “Triadic and quadratic closure as mechanisms for inter-firm transactional network dynamics,” lightening presentation at The International Conference on Complex Networks and Their Applications (2018).",
+    "A. Hamamoto, T. Kito: “Effects of industrial and geographical proximities of firms on the Japanese inter-firm network,” lightening presentation at The International Conference on Complex Networks and Their Applications (2018).",
+    "濱本章弘，鬼頭朋見：“企業間取引ネットワークの抽象化へ向けて：非均質なコミュニティの組成解析,” ネットワークが創発する知能研究会 (2018).",
+    "濱本章弘，鬼頭朋見：“企業間取引ネットワークのコミュニティ分析による産業および地域クラスタの組成解析,” 日本経営工学会経営システム誌，Vol.27, No.4, pp.234-239 (2018).",
+    "谷中峻輔，鬼頭朋見：“自動車産業サプライネットワークの構造分析と分類：サプライベースとサプライヤ依存度に注目したアプローチ,” 日本経営工学会経営システム誌，Vol.27, No.4, pp.227-233 (2018).",
+  ]

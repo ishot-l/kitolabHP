@@ -37,6 +37,7 @@
 </template>
 <script>
 import CardMenuColumn from '~/components/CardMenuColumn.vue'
+import news from '~/data/news.js'
 
 export default {
   head() {
@@ -49,28 +50,7 @@ export default {
   },
   data: function() {
         return {
-            news: [
-                {
-                    "ja": `9月21日～25日にオンラインで行われる国際会議 NetSci にて発表を行います。<br><a href="http://netsci2020.netscisociety.net/" target="_blank">http://netsci2020.netscisociety.net/</a>`,
-                    "en": `We will be presenting at NetSci, an international conference that will be held online from September 21-25. <br><a href="http://netsci2020.netscisociety.net/" target="_blank">http://netsci2020.netscisociety.net/</a>`,
-                    "date": "2020/07/14"
-                },
-                {
-                    "ja": `Socioeconomic Networks and Network Science Workshop をオンラインにて開催致します。<br><a href="https://sites.google.com/view/socioeco-netsci-waseda2020" target="_blank">https://sites.google.com/view/socioeco-netsci-waseda2020</a>`,
-                    "en": `"Socioeconomic Networks and Network Science Workshop" will be held online.<br><a href="https://sites.google.com/view/socioeco-netsci-waseda2020" target="_blank">https://sites.google.com/view/socioeco-netsci-waseda2020</a>`,
-                    "date": "2020/04/19"
-                },
-                {
-                    "ja": `<b>当面、鬼頭研の研究活動はオンラインで行います。</b>`,
-                    "en": `<b>We will conduct research activities online for the time being.</b>`,
-                    "date": "2020/04/06"
-                },
-                {
-                    "ja": `国際会議 NetSci-X が開催されました。ご参加いただいた皆様、ありがとうございました。<br><a href="https://netscix2020tokyo.github.io/" target="_blank">https://netscix2020tokyo.github.io/</a>`,
-                    "en": `The international conference NetSci-X was held. Thank you to everyone who participated.<br><a href="https://netscix2020tokyo.github.io/" target="_blank">https://netscix2020tokyo.github.io/</a>`,
-                    "date": "2020/01/25"
-                }
-            ]
+            news
         }
     }
 }
